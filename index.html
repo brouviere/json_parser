@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr
+">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- CUSTOM STYLE -->
+	<link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body ng-app="parseJsonApp">
+	<div ng-controller="HomeController">
+		<div class="container">
+			<h1>JSON PARSER</h1>
+			
+			<h2>Filter</h2>
+			<form action="">
+				<!-- searchByName -->
+				<div class="form-group">
+					<label for="">Search by name</label>
+				    <input class="form-control" type="text" ng-model="searchName">
+				</div>
+				<!-- searchByAge -->
+				<div class="form-group">
+					<label for="">Search by age</label>
+				    <input class="form-control" type="text" ng-model="searchAge">
+				</div>
+			</form>
+			
+
+			<!-- Affichage du contenu du json -->
+			<div ng-repeat="user in users | filter:{'name':searchName, 'age':searchAge}" class="panel panel-default">
+				<div class="panel-heading">
+					<h2 class="panel-title" ng-bind="user.name"></h2>
+				</div>
+				<div class="panel-body">
+					<p>Address : <span ng-bind="user.address"></span></p>
+					<p>Phone : <span ng-bind="user.phone"></span></p>
+					<p>Age : <span ng-bind="user.age"></span></p>
+					<p class="inlineLabel" ng-repeat="(key, tech) in user.techs">
+						<span class="label label-primary" ng-bind="key"></span> : 
+						<span class="badge" ng-bind="tech"></span>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+
+	<!--  Angular JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<!-- CORE -->
+	<script src="assets/scripts/core/app.js"></script>
+	<!-- CONTROLLER -->
+	<script src="assets/scripts/controllers/home-controller.js"></script>
+</body>
+</html>

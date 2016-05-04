@@ -1,0 +1,11 @@
+.inlineLabel{
+	display: inline;
+}
+
+.inlineLabel::after {
+	content: "|";
+}
+
+.inlineLabel:last-child::after {
+	content: "";
+}

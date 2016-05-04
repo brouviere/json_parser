@@ -1,0 +1,53 @@
+[
+	{
+		"name":"Tom",
+		"phone": "0642314275",
+		"age": 7,
+		"address": "21 jump street",
+		"techs":{
+			"php": 7,
+			"js": 3,
+			"nodeJs": 12
+		}
+
+	},
+	{
+		"name":"Jane",
+		"phone": "0442468510",
+		"age": 32,
+		"address": "15 forest street",
+		"techs":{
+			"php": 2,
+			"bootstrap": 3,
+			"symfony": 7
+		}
+
+	},
+	{
+		"name":"John",
+		"phone": "0615132560",
+		"age": 0,
+		"address": "2240 forest street",
+		"techs":{
+			"php": 7,
+			"angularJs": "started",
+			"symfony": 7,
+			"gulp": 10
+		}
+
+	},
+	{
+		"name":"Boby",
+		"phone": "0615132560",
+		"age": 74,
+		"address": "2240 Dallas avenue",
+		"techs":{
+			"php": 10,
+			"angularJs": "started",
+			"symfony": 7,
+			"gulp": 2,
+			"grunt": 10
+		}
+
+	}
+]
